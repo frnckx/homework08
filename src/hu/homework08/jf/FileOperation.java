@@ -1,14 +1,15 @@
 package hu.homework08.jf;
 
-import javax.xml.bind.SchemaOutputResolver;
 import java.io.*;
 
 public class FileOperation {
 
-    public static void fileMaker(String location, String fileName) {
-       // FileOutputStream fout = null;
+    public static void fileMaker(String location, int num, String fileName, String extension) {
         try {
-          FileOutputStream  fout = new FileOutputStream(location + fileName);
+            for (int i = 1; i <=num ; i++) {
+                FileOutputStream  fout = new FileOutputStream(location + fileName+i+"."+ extension);
+
+            }
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
