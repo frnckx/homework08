@@ -19,4 +19,25 @@ public class FileOperation {
         }
 
     }
+
+    public static void fileMakerWithContent(String location, String fileName, String extension, String content){
+        try {
+
+            FileOutputStream  fout = new FileOutputStream(location + fileName+"."+ extension);
+            BufferedOutputStream bout = new BufferedOutputStream(fout);
+            byte b[]=content.getBytes();
+            bout.write(b);
+            bout.flush();
+            bout.close();
+            fout.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (Exception e){
+
+            System.out.println(e);
+        }
+
+
+    }
 }
