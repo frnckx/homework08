@@ -8,6 +8,6 @@ public class Main {
 
 
         FileOperation.fileMaker("C:\\Users\\Admin\\Desktop\\", 5, "teszt", "txt");
-        FileOperation.fileMakerWithContent( "C:\\Users\\Admin\\Desktop\\", "three","txt", "Hello");
+        FileOperation.fileMakerWithContent( "C:\\Users\\Admin\\Desktop\\", "four",3,"txt", "Hello");
     }
 }
